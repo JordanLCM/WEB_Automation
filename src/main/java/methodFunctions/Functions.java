@@ -4,11 +4,13 @@ import javax.security.auth.login.FailedLoginException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.SkipException;
 
 import utilities.BaseDrivers;
 import utilities.CreateReports;
 import utilities.ResultListener;
+import utilities.TakeScreenShot;
 
 public class Functions {
 
@@ -21,6 +23,7 @@ public class Functions {
 	CreateReports createR = CreateReports.getInstance();
 	BaseDrivers bd = BaseDrivers.getInstance();
 	ResultListener resultL = ResultListener.getInstance();
+	TakeScreenShot takeSS = TakeScreenShot.getInstance();
 
 	public void consoleLogFailTest(String caseFailed) throws InterruptedException, FailedLoginException {
 		throw new FailedLoginException(caseFailed + " is fail");
@@ -35,6 +38,7 @@ public class Functions {
 		if (pageUrl.equals(siteUrl)) {
 			createR.getExtentTest().info("Website = " + pageUrl);
 		} else {
+			Thread.sleep(1000);
 			consoleLogFailTest(resultL.resultOfCaseStatusExtent());
 		}
 		Thread.sleep(750);
@@ -80,6 +84,7 @@ public class Functions {
 			enterPassField.sendKeys(passID);
 			createR.getExtentTest().info("Keyed " + passID);
 		} else {
+			Thread.sleep(1000);
 			consoleLogFailTest(resultL.resultOfCaseStatusExtent());
 		}
 		Thread.sleep(500);
@@ -93,13 +98,14 @@ public class Functions {
 			otpField.sendKeys(otp);
 			createR.getExtentTest().info("Keyed " + otp);
 		} else {
+			Thread.sleep(1000);
 			consoleLogFailTest(resultL.resultOfCaseStatusExtent());
 		}
 		Thread.sleep(500);
 	}
 
 	private String loginAttributesEnabled = "class";
-	
+
 	public void clickLoginButton() throws FailedLoginException, InterruptedException {
 		WebElement loginButton = bd.getDriver().findElement(By.id("login_popup_btn"));
 		String loginButtonEnabled = loginButton.getAttribute(loginAttributesEnabled);
@@ -107,12 +113,42 @@ public class Functions {
 			loginButton.click();
 			createR.getExtentTest().info("Clicked " + loginButton.getText());
 		} else {
+			Thread.sleep(1000);
 			consoleLogFailTest(resultL.resultOfCaseStatusExtent());
 		}
 		Thread.sleep(1000);
 	}
 
-	public void verifyUserID() {
+	public void verifyUserID(String userID) throws InterruptedException, FailedLoginException {
+		WebElement loggedInUserID = bd.getDriver().findElement(By.xpath("(//a[contains(text(),'" + userID + "')])[1]"));
+		String UserIDText = loggedInUserID.getText();
+		if (loggedInUserID.isDisplayed()) {
+			Actions action = new Actions(bd.getDriver());
+			action.moveToElement(loggedInUserID).perform();
+			createR.getExtentTest().info("Logged in to " + UserIDText);
+		} else {
+			Thread.sleep(1000);
+			consoleLogFailTest(resultL.resultOfCaseStatusExtent());
+		}
+		Thread.sleep(1000);
+	}
 
+	public void logoutOfUserID() throws InterruptedException, FailedLoginException {
+		WebElement logoutButton = bd.getDriver().findElement(By.xpath("//button[contains(text(),'登出')]"));
+		String logoutText = logoutButton.getText();
+		if (logoutText.equals("登出")) {
+			logoutButton.click();
+			createR.getExtentTest().info("Clicked " + logoutText);
+		} else {
+			Thread.sleep(1000);
+			consoleLogFailTest(resultL.resultOfCaseStatusExtent());
+		}
+		Thread.sleep(1000);
+	}
+
+	public void screenCaptureIfPassedFinalStep() {
+		takeSS.getTakeScreenShot(resultL.resultOfCaseStatusExtent() + " test end");
+		createR.getExtentTest().info("Final step " + resultL.resultOfCaseStatusExtent() + " is passed!");
+		createR.getExtentTest().addScreenCaptureFromPath(takeSS.screenShotPathExtent() + resultL.resultOfCaseStatusExtent() + " test end.png", resultL.resultOfCaseStatusExtent());
 	}
 }

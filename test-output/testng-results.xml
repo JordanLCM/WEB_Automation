@@ -1,111 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-28T18:13:06 SGT" name="Default suite" finished-at="2022-07-28T18:13:20 SGT" duration-ms="13859">
+  <suite started-at="2022-07-28T21:48:20 SGT" name="Default suite" finished-at="2022-07-28T21:48:38 SGT" duration-ms="17374">
     <groups>
     </groups>
-    <test started-at="2022-07-28T18:13:06 SGT" name="Default test" finished-at="2022-07-28T18:13:20 SGT" duration-ms="13859">
-      <class name="frontend.Login">
-        <test-method is-config="true" signature="setProperty()[pri:0, instance:frontend.Login@5fbdfdcf]" started-at="2022-07-28T18:13:06 SGT" name="setProperty" finished-at="2022-07-28T18:13:09 SGT" duration-ms="3602" status="PASS">
+    <test started-at="2022-07-28T21:48:20 SGT" name="Default test" finished-at="2022-07-28T21:48:38 SGT" duration-ms="17374">
+      <class name="frontend.Logout">
+        <test-method is-config="true" signature="setProperty()[pri:0, instance:frontend.Logout@791cbf87]" started-at="2022-07-28T21:48:20 SGT" name="setProperty" finished-at="2022-07-28T21:48:23 SGT" duration-ms="2684" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setProperty -->
-        <test-method signature="openWebsite()[pri:0, instance:frontend.Login@5fbdfdcf]" started-at="2022-07-28T18:13:09 SGT" name="openWebsite" finished-at="2022-07-28T18:13:10 SGT" duration-ms="789" status="PASS">
+        <test-method signature="openWebsite()[pri:0, instance:frontend.Logout@791cbf87]" started-at="2022-07-28T21:48:23 SGT" name="openWebsite" finished-at="2022-07-28T21:48:24 SGT" duration-ms="775" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openWebsite -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:frontend.Login@5fbdfdcf]" started-at="2022-07-28T18:13:10 SGT" name="logCaseStatus" finished-at="2022-07-28T18:13:10 SGT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:frontend.Logout@791cbf87]" started-at="2022-07-28T21:48:24 SGT" name="logCaseStatus" finished-at="2022-07-28T21:48:24 SGT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=openWebsite status=SUCCESS method=Login.openWebsite()[pri:0, instance:frontend.Login@5fbdfdcf] output={null}]]]>
+                <![CDATA[[TestResult name=openWebsite status=SUCCESS method=Logout.openWebsite()[pri:0, instance:frontend.Logout@791cbf87] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method signature="closeAnnouncement()[pri:1, instance:frontend.Login@5fbdfdcf]" started-at="2022-07-28T18:13:10 SGT" name="closeAnnouncement" finished-at="2022-07-28T18:13:10 SGT" duration-ms="1" status="PASS">
+        <test-method signature="closeAnnouncement()[pri:1, instance:frontend.Logout@791cbf87]" started-at="2022-07-28T21:48:24 SGT" name="closeAnnouncement" finished-at="2022-07-28T21:48:24 SGT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeAnnouncement -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:frontend.Login@5fbdfdcf]" started-at="2022-07-28T18:13:10 SGT" name="logCaseStatus" finished-at="2022-07-28T18:13:10 SGT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:frontend.Logout@791cbf87]" started-at="2022-07-28T21:48:24 SGT" name="logCaseStatus" finished-at="2022-07-28T21:48:24 SGT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=closeAnnouncement status=SUCCESS method=Login.closeAnnouncement()[pri:1, instance:frontend.Login@5fbdfdcf] output={null}]]]>
+                <![CDATA[[TestResult name=closeAnnouncement status=SUCCESS method=Logout.closeAnnouncement()[pri:1, instance:frontend.Logout@791cbf87] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method signature="clickLoginOption()[pri:2, instance:frontend.Login@5fbdfdcf]" started-at="2022-07-28T18:13:10 SGT" name="clickLoginOption" finished-at="2022-07-28T18:13:11 SGT" depends-on-methods="frontend.Login.openWebsite" duration-ms="860" status="PASS">
+        <test-method signature="clickLoginOption()[pri:2, instance:frontend.Logout@791cbf87]" started-at="2022-07-28T21:48:24 SGT" name="clickLoginOption" finished-at="2022-07-28T21:48:25 SGT" depends-on-methods="frontend.Logout.openWebsite" duration-ms="822" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickLoginOption -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:frontend.Login@5fbdfdcf]" started-at="2022-07-28T18:13:11 SGT" name="logCaseStatus" finished-at="2022-07-28T18:13:11 SGT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:frontend.Logout@791cbf87]" started-at="2022-07-28T21:48:25 SGT" name="logCaseStatus" finished-at="2022-07-28T21:48:25 SGT" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=clickLoginOption status=SUCCESS method=Login.clickLoginOption()[pri:2, instance:frontend.Login@5fbdfdcf] output={null}]]]>
+                <![CDATA[[TestResult name=clickLoginOption status=SUCCESS method=Logout.clickLoginOption()[pri:2, instance:frontend.Logout@791cbf87] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method signature="loginPopUpFillInDetails()[pri:3, instance:frontend.Login@5fbdfdcf]" started-at="2022-07-28T18:13:11 SGT" name="loginPopUpFillInDetails" finished-at="2022-07-28T18:13:13 SGT" depends-on-methods="frontend.Login.clickLoginOption" duration-ms="1913" status="PASS">
+        <test-method signature="loginPopUpFillInDetails()[pri:3, instance:frontend.Logout@791cbf87]" started-at="2022-07-28T21:48:25 SGT" name="loginPopUpFillInDetails" finished-at="2022-07-28T21:48:26 SGT" depends-on-methods="frontend.Logout.clickLoginOption" duration-ms="1752" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginPopUpFillInDetails -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:frontend.Login@5fbdfdcf]" started-at="2022-07-28T18:13:13 SGT" name="logCaseStatus" finished-at="2022-07-28T18:13:13 SGT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:frontend.Logout@791cbf87]" started-at="2022-07-28T21:48:26 SGT" name="logCaseStatus" finished-at="2022-07-28T21:48:26 SGT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginPopUpFillInDetails status=SUCCESS method=Login.loginPopUpFillInDetails()[pri:3, instance:frontend.Login@5fbdfdcf] output={null}]]]>
+                <![CDATA[[TestResult name=loginPopUpFillInDetails status=SUCCESS method=Logout.loginPopUpFillInDetails()[pri:3, instance:frontend.Logout@791cbf87] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method signature="clickLoginButton()[pri:4, instance:frontend.Login@5fbdfdcf]" started-at="2022-07-28T18:13:13 SGT" name="clickLoginButton" finished-at="2022-07-28T18:13:14 SGT" depends-on-methods="frontend.Login.loginPopUpFillInDetails" duration-ms="1092" status="PASS">
+        <test-method signature="clickLoginButton()[pri:4, instance:frontend.Logout@791cbf87]" started-at="2022-07-28T21:48:26 SGT" name="clickLoginButton" finished-at="2022-07-28T21:48:27 SGT" depends-on-methods="frontend.Logout.loginPopUpFillInDetails" duration-ms="1047" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickLoginButton -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:frontend.Login@5fbdfdcf]" started-at="2022-07-28T18:13:14 SGT" name="logCaseStatus" finished-at="2022-07-28T18:13:14 SGT" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:frontend.Logout@791cbf87]" started-at="2022-07-28T21:48:27 SGT" name="logCaseStatus" finished-at="2022-07-28T21:48:27 SGT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=clickLoginButton status=SUCCESS method=Login.clickLoginButton()[pri:4, instance:frontend.Login@5fbdfdcf] output={null}]]]>
+                <![CDATA[[TestResult name=clickLoginButton status=SUCCESS method=Logout.clickLoginButton()[pri:4, instance:frontend.Logout@791cbf87] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method signature="verifyLogin()[pri:5, instance:frontend.Login@5fbdfdcf]" started-at="2022-07-28T18:13:14 SGT" name="verifyLogin" finished-at="2022-07-28T18:13:14 SGT" depends-on-methods="frontend.Login.clickLoginButton" duration-ms="3" status="PASS">
+        <test-method signature="verifyLogin()[pri:5, instance:frontend.Logout@791cbf87]" started-at="2022-07-28T21:48:27 SGT" name="verifyLogin" finished-at="2022-07-28T21:48:31 SGT" depends-on-methods="frontend.Logout.clickLoginButton" duration-ms="3799" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyLogin -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:frontend.Login@5fbdfdcf]" started-at="2022-07-28T18:13:14 SGT" name="logCaseStatus" finished-at="2022-07-28T18:13:14 SGT" duration-ms="2" status="PASS">
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:frontend.Logout@791cbf87]" started-at="2022-07-28T21:48:31 SGT" name="logCaseStatus" finished-at="2022-07-28T21:48:31 SGT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyLogin status=SUCCESS method=Login.verifyLogin()[pri:5, instance:frontend.Login@5fbdfdcf] output={null}]]]>
+                <![CDATA[[TestResult name=verifyLogin status=SUCCESS method=Logout.verifyLogin()[pri:5, instance:frontend.Logout@791cbf87] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logCaseStatus -->
-        <test-method is-config="true" signature="endTest()[pri:0, instance:frontend.Login@5fbdfdcf]" started-at="2022-07-28T18:13:14 SGT" name="endTest" finished-at="2022-07-28T18:13:20 SGT" duration-ms="5541" status="PASS">
+        <test-method signature="clickLogoutButton()[pri:6, instance:frontend.Logout@791cbf87]" started-at="2022-07-28T21:48:31 SGT" name="clickLogoutButton" finished-at="2022-07-28T21:48:34 SGT" depends-on-methods="frontend.Logout.verifyLogin" duration-ms="2636" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickLogoutButton -->
+        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:frontend.Logout@791cbf87]" started-at="2022-07-28T21:48:34 SGT" name="logCaseStatus" finished-at="2022-07-28T21:48:34 SGT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=clickLogoutButton status=SUCCESS method=Logout.clickLogoutButton()[pri:6, instance:frontend.Logout@791cbf87] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logCaseStatus -->
+        <test-method is-config="true" signature="endTest()[pri:0, instance:frontend.Logout@791cbf87]" started-at="2022-07-28T21:48:34 SGT" name="endTest" finished-at="2022-07-28T21:48:38 SGT" duration-ms="3820" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
-      </class> <!-- frontend.Login -->
+      </class> <!-- frontend.Logout -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

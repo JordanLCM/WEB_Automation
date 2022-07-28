@@ -30,7 +30,7 @@ public class BaseDrivers {
 	}
 	
 	public void stopDriver() throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		driver.quit();
 	}
 }

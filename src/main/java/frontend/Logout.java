@@ -14,12 +14,12 @@ import utilities.CreateReports;
 import utilities.GenerateRandomNumbers;
 import utilities.ResultListener;
 
-public class Login {
+public class Logout {
 
 	static String siteUrl = "https://wl003.the777888.com/";
 	static String driverType = "webdriver.chrome.driver";
 	static String driverPath = "chromedriver.exe";
-	static String reportName = "Login";
+	static String reportName = "Logout";
 	static String userID = "qctester4047";
 	static String passID = "test123";
 	static String otp = "123456";
@@ -73,6 +73,15 @@ public class Login {
 //		will remove when the Webpage is fixed
 		bd.getDriver().get(siteUrl);
 		func.verifyUserID(userID);
+	}
+	
+	@Test(dependsOnMethods = { "verifyLogin" }, priority = 6)
+	public void clickLogoutButton() throws FailedLoginException, InterruptedException {
+		createR.doCreateTest("Click logout button");
+		func.logoutOfUserID();
+//		will remove when the Webpage is fixed
+		bd.getDriver().get(siteUrl);
+		Thread.sleep(1000);
 	}
 
 	@AfterMethod
