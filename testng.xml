@@ -5,6 +5,7 @@
 		<classes>
 			<class name="frontend.OpenSite"></class>
 			<class name="frontend.Login"></class>
+			<class name="frontend.Logout"></class>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
