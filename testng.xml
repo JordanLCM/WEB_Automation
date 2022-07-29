@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-	<test thread-count="5" name="Test">
+	<test thread-count="5" name="FE test">
 		<classes>
-			<class name="frontend.OpenSite"></class>
 			<class name="frontend.Login"></class>
 			<class name="frontend.Logout"></class>
+			<class name="frontend.Register"></class>
 		</classes>
 	</test> <!-- Test -->
+	<test name="BO test">
+		<classes>
+			<class name="backend.LoginBO"></class>
+			<class name="backend.LogoutBO"></class>
+			<class name="backend.SelectMemberBO"></class>
+		</classes>
+	</test>
 </suite> <!-- Suite -->

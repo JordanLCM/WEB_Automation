@@ -8,11 +8,11 @@ public class CreateReports {
 
 	private static CreateReports createR = new CreateReports();
 	
-	public static CreateReports getInstance() {
+	public static CreateReports get_Instance() {
 		return createR;
 	}
 	
-	BaseDrivers bd = BaseDrivers.getInstance();
+	BaseDrivers bd = BaseDrivers.get_Instance();
 
 	private ExtentSparkReporter sparkReport;
 	private ExtentReports extentReport;
@@ -21,9 +21,9 @@ public class CreateReports {
 	private String userDir = System.getProperty("user.dir");
 	private String pathOfReport = userDir + ".\\src\\main\\resources\\Reports\\";
 	
-	public void doGenerateReport(String nameOfReport) {
+	public void do_Generate_Report(String nameOfReport) {
 		extentReport = new ExtentReports();
-		sparkReport = new ExtentSparkReporter(pathOfReport + nameOfReport + " test report.html");
+		sparkReport = new ExtentSparkReporter(pathOfReport + nameOfReport + "_Report.html");
 		extentReport.attachReporter(sparkReport);
 
 		extentReport.setSystemInfo("Platform", "Windows");
@@ -32,19 +32,19 @@ public class CreateReports {
 		extentReport.setSystemInfo("User", "Jordan");
 	}
 	
-	public void doCreateTest(String testName) {
+	public void do_Create_Test(String testName) {
 		extentTest = extentReport.createTest(testName);
 	}
 	
-	public void doFlushTest() {
+	public void do_Flush_Test() {
 		extentReport.flush();
 	}
 	
-	public ExtentReports getExtentReport() {
+	public ExtentReports get_Extent_Report() {
 		return extentReport;
 	}
 	
-	public ExtentTest getExtentTest() {
+	public ExtentTest get_Extent_Test() {
 		return extentTest;
 	}
 }

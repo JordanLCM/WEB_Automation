@@ -7,7 +7,7 @@ public class BaseDrivers {
 
 	private static BaseDrivers baseD = new BaseDrivers();
 
-	public static BaseDrivers getInstance() {
+	public static BaseDrivers get_Instance() {
 		return baseD;
 	}
 
@@ -30,7 +30,7 @@ public class BaseDrivers {
 	}
 	
 	public void stopDriver() throws InterruptedException {
-		Thread.sleep(3000);
+		Thread.sleep(1500);
 		driver.quit();
 	}
 }

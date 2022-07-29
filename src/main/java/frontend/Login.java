@@ -24,66 +24,63 @@ public class Login {
 	static String passID = "test123";
 	static String otp = "123456";
 
-	BaseDrivers bd = BaseDrivers.getInstance();
-	CreateReports createR = CreateReports.getInstance();
-	ResultListener resultL = ResultListener.getInstance();
-	Functions func = Functions.getInstance();
+	BaseDrivers bd = BaseDrivers.get_Instance();
+	CreateReports createR = CreateReports.get_Instance();
+	ResultListener resultL = ResultListener.get_Instance();
+	Functions func = Functions.get_Instance();
 
 	@BeforeClass
-	public void setProperty() throws InterruptedException {
-		createR.doGenerateReport(reportName);
+	public void set_Property() throws InterruptedException {
+		createR.do_Generate_Report(reportName);
 		bd.setDriverProperty(driverType, driverPath);
 		bd.startDriver(siteUrl);
 	}
 
 	@Test(priority = 0)
-	public void openWebsite() throws InterruptedException, FailedLoginException {
-		createR.doCreateTest("Open website");
-		func.openToURL(siteUrl);
+	public void open_Website() throws InterruptedException, FailedLoginException {
+		createR.do_Create_Test("open_Website".toUpperCase());
+		func.open_To_URL(siteUrl);
 	}
 
 	@Test(priority = 1)
-	public void closeAnnouncement() {
-		createR.doCreateTest("Close Announcement");
+	public void close_Announcement() {
+		createR.do_Create_Test("close_Announcement".toUpperCase());
 	}
 
-	@Test(dependsOnMethods = { "openWebsite" }, priority = 2)
-	public void clickLoginOption() throws FailedLoginException, InterruptedException {
-		createR.doCreateTest("Click login option");
-		func.clickLoginOption();
+	@Test(dependsOnMethods = { "open_Website" }, priority = 2)
+	public void click_Login_Option() throws FailedLoginException, InterruptedException {
+		createR.do_Create_Test("click_Login_Option".toUpperCase());
+		func.click_Login_Option();
 	}
 
-	@Test(dependsOnMethods = { "clickLoginOption" }, priority = 3)
-	public void loginPopUpFillInDetails() throws FailedLoginException, InterruptedException {
-		createR.doCreateTest("Login pop up fill in details");
-		func.loginPopUpUserID(userID);
-		func.loginPopUpPassID(passID);
-		func.loginPopUpOtp(otp);
+	@Test(dependsOnMethods = { "click_Login_Option" }, priority = 3)
+	public void login_Pop_Up_Fill_In_Details() throws FailedLoginException, InterruptedException {
+		createR.do_Create_Test("login_Pop_Up_Fill_In_Details".toUpperCase());
+		func.login_Pop_Up_User_ID(userID);
+		func.login_Pop_Up_Pass_ID(passID);
+		func.login_Pop_Up_Otp(otp);
 	}
 
-	@Test(dependsOnMethods = { "loginPopUpFillInDetails" }, priority = 4)
-	public void clickLoginButton() throws FailedLoginException, InterruptedException {
-		createR.doCreateTest("Click login button");
-		func.clickLoginButton();
+	@Test(dependsOnMethods = { "login_Pop_Up_Fill_In_Details" }, priority = 4)
+	public void click_Login_Button() throws FailedLoginException, InterruptedException {
+		createR.do_Create_Test("click_Login_Button".toUpperCase());
+		func.click_Login_Button();
 	}
 
-	@Test(dependsOnMethods = { "clickLoginButton" }, priority = 5)
-	public void verifyLogin() throws FailedLoginException, InterruptedException {
-		createR.doCreateTest("Verify login");
-//		will remove when the Webpage is fixed
-		bd.getDriver().get(siteUrl);
-		func.verifyUserID(userID);
+	@Test(dependsOnMethods = { "click_Login_Button" }, priority = 5)
+	public void verify_Login() throws FailedLoginException, InterruptedException {
+		createR.do_Create_Test("verify_Login".toUpperCase());
+		func.verify_User_ID(userID);
 	}
 
 	@AfterMethod
-	public void logCaseStatus(ITestResult result) {
-		resultL.logCase(result);
+	public void log_Case_Status(ITestResult result) {
+		resultL.log_Case(result);
 	}
 
 	@AfterClass
-	public void endTest() throws InterruptedException {
-		func.screenCaptureIfPassedFinalStep();
+	public void end_Test() throws InterruptedException {
 		bd.stopDriver();
-		createR.doFlushTest();
+		createR.do_Flush_Test();
 	}
 }

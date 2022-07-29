@@ -1,0 +1,139 @@
+<html>
+<head>
+<title>TestNG:  BO test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>BO test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>12/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Jul 29 14:54:58 SGT 2022</td>
+</tr>
+<tr><td>Total time:</td><td>39 seconds (39188 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='backend.LogoutBO.verify_Login_BO()'><b>verify_Login_BO</b><br>Test class: backend.LogoutBO</td>
+<td></td>
+<td>3</td>
+<td>backend.LogoutBO@2c1b194a</td></tr>
+<tr>
+<td title='backend.LoginBO.verify_Login_BO()'><b>verify_Login_BO</b><br>Test class: backend.LoginBO</td>
+<td></td>
+<td>3</td>
+<td>backend.LoginBO@32502377</td></tr>
+<tr>
+<td title='backend.SelectMemberBO.open_Website_BO()'><b>open_Website_BO</b><br>Test class: backend.SelectMemberBO</td>
+<td></td>
+<td>0</td>
+<td>backend.SelectMemberBO@4dbb42b7</td></tr>
+<tr>
+<td title='backend.SelectMemberBO.select_Member()'><b>select_Member</b><br>Test class: backend.SelectMemberBO</td>
+<td></td>
+<td>3</td>
+<td>backend.SelectMemberBO@4dbb42b7</td></tr>
+<tr>
+<td title='backend.SelectMemberBO.login_Fill_In_Details_BO()'><b>login_Fill_In_Details_BO</b><br>Test class: backend.SelectMemberBO</td>
+<td></td>
+<td>2</td>
+<td>backend.SelectMemberBO@4dbb42b7</td></tr>
+<tr>
+<td title='backend.LogoutBO.open_Website_BO()'><b>open_Website_BO</b><br>Test class: backend.LogoutBO</td>
+<td></td>
+<td>0</td>
+<td>backend.LogoutBO@2c1b194a</td></tr>
+<tr>
+<td title='backend.LogoutBO.click_Logout_Button_BO()'><b>click_Logout_Button_BO</b><br>Test class: backend.LogoutBO</td>
+<td></td>
+<td>3</td>
+<td>backend.LogoutBO@2c1b194a</td></tr>
+<tr>
+<td title='backend.SelectMemberBO.select_Member_Module_BO()'><b>select_Member_Module_BO</b><br>Test class: backend.SelectMemberBO</td>
+<td></td>
+<td>2</td>
+<td>backend.SelectMemberBO@4dbb42b7</td></tr>
+<tr>
+<td title='backend.SelectMemberBO.select_Filtered_Member()'><b>select_Filtered_Member</b><br>Test class: backend.SelectMemberBO</td>
+<td></td>
+<td>3</td>
+<td>backend.SelectMemberBO@4dbb42b7</td></tr>
+<tr>
+<td title='backend.LoginBO.open_Website_BO()'><b>open_Website_BO</b><br>Test class: backend.LoginBO</td>
+<td></td>
+<td>0</td>
+<td>backend.LoginBO@32502377</td></tr>
+<tr>
+<td title='backend.LoginBO.login_Fill_In_Details_BO()'><b>login_Fill_In_Details_BO</b><br>Test class: backend.LoginBO</td>
+<td></td>
+<td>2</td>
+<td>backend.LoginBO@32502377</td></tr>
+<tr>
+<td title='backend.LogoutBO.login_Fill_In_Details_BO()'><b>login_Fill_In_Details_BO</b><br>Test class: backend.LogoutBO</td>
+<td></td>
+<td>2</td>
+<td>backend.LogoutBO@2c1b194a</td></tr>
+</table><p>
+</body>
+</html>

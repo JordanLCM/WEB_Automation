@@ -24,48 +24,47 @@ public class LoginBO {
 	static String otp = "123456";
 
 
-	BaseDrivers bd = BaseDrivers.getInstance();
-	CreateReports createR = CreateReports.getInstance();
-	ResultListener resultL = ResultListener.getInstance();
-	Functions func = Functions.getInstance();
+	BaseDrivers bd = BaseDrivers.get_Instance();
+	CreateReports createR = CreateReports.get_Instance();
+	ResultListener resultL = ResultListener.get_Instance();
+	Functions func = Functions.get_Instance();
 
 	@BeforeClass
-	public void setProperty() throws InterruptedException {
-		createR.doGenerateReport(reportName);
+	public void set_Property() throws InterruptedException {
+		createR.do_Generate_Report(reportName);
 		bd.setDriverProperty(driverType, driverPath);
 		bd.startDriver(siteUrl);
 	}
 
 	@Test(priority = 0)
-	public void openWebsiteBO() throws InterruptedException, FailedLoginException {
-		createR.doCreateTest("Open website BO");
-		func.openToURL(siteUrl);
+	public void open_Website_BO() throws InterruptedException, FailedLoginException {
+		createR.do_Create_Test("open_Website_BO".toUpperCase());
+		func.open_To_URL(siteUrl);
 	}
 	
-	@Test(dependsOnMethods = { "openWebsiteBO" }, priority = 1)
-	public void loginFillInDetailsBO() throws FailedLoginException, InterruptedException {
-		createR.doCreateTest("Fill in login details & login BO");
-		func.inputloginBOUserID(userID);
-		func.inputloginBOPassID(passID);
-		func.inputloginBOOtp(otp);
-		func.clickLoginBOButton();
+	@Test(dependsOnMethods = { "open_Website_BO" }, priority = 1)
+	public void login_Fill_In_Details_BO() throws FailedLoginException, InterruptedException {
+		createR.do_Create_Test("login_Fill_In_Details_BO".toUpperCase());
+		func.input_Login_BO_User_ID(userID);
+		func.input_Login_BO_Pass_ID(passID);
+		func.input_Login_BO_Otp(otp);
+		func.click_Login_BO_Button();
 	}
 	
-	@Test(dependsOnMethods = { "loginFillInDetails" }, priority = 2)
-	public void verifyLoginBO() throws FailedLoginException, InterruptedException {
-		createR.doCreateTest("Verify login BO");
-		func.verifyBOUserID(userID);
+	@Test(dependsOnMethods = { "login_Fill_In_Details_BO" }, priority = 2)
+	public void verify_Login_BO() throws FailedLoginException, InterruptedException {
+		createR.do_Create_Test("verify_Login_BO".toUpperCase());
+		func.verify_BO_User_ID(userID);
 	}
 
 	@AfterMethod
-	public void logCaseStatus(ITestResult result) {
-		resultL.logCase(result);
+	public void log_Case_Status(ITestResult result) {
+		resultL.log_Case(result);
 	}
 	
 	@AfterClass
-	public void endTest() throws InterruptedException {
-		func.screenCaptureIfPassedFinalStep();
+	public void end_Test() throws InterruptedException {
 		bd.stopDriver();
-		createR.doFlushTest();
+		createR.do_Flush_Test();
 	}
 }

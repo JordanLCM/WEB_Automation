@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="FE test(failed)">
+    <classes>
+      <class name="frontend.Logout">
+        <methods>
+          <include name="click_Login_Option"/>
+          <include name="click_Login_Button"/>
+          <include name="log_Case_Status"/>
+          <include name="verify_Login"/>
+          <include name="set_Property"/>
+          <include name="click_Logout_Button"/>
+          <include name="end_Test"/>
+          <include name="login_Pop_Up_Fill_In_Details"/>
+          <include name="open_Website"/>
+        </methods>
+      </class> <!-- frontend.Logout -->
+      <class name="frontend.Register">
+        <methods>
+          <include name="verify_Register"/>
+          <include name="log_Case_Status"/>
+          <include name="Set_Property"/>
+          <include name="register_Fill_In_Details"/>
+          <include name="click_Register_Option"/>
+          <include name="end_Test"/>
+          <include name="open_Website"/>
+        </methods>
+      </class> <!-- frontend.Register -->
+    </classes>
+  </test> <!-- FE test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

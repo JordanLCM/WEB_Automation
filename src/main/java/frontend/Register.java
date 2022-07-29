@@ -20,45 +20,66 @@ public class Register {
 	static String driverType = "webdriver.chrome.driver";
 	static String driverPath = "chromedriver.exe";
 	static String reportName = "Register";
+	static String userID = "qctester";
+	static String passID = "test123";
+	static String otp = "123456";
+	static String referralID = "abc123";
 
-	BaseDrivers bd = BaseDrivers.getInstance();
-	CreateReports createR = CreateReports.getInstance();
-	ResultListener resultL = ResultListener.getInstance();
-	Functions func = Functions.getInstance();
+	BaseDrivers bd = BaseDrivers.get_Instance();
+	CreateReports createR = CreateReports.get_Instance();
+	ResultListener resultL = ResultListener.get_Instance();
+	Functions func = Functions.get_Instance();
 
 	@BeforeClass
-	public void setProperty() throws InterruptedException {
-		createR.doGenerateReport(reportName);
+	public void Set_Property() throws InterruptedException {
+		createR.do_Generate_Report(reportName);
 		bd.setDriverProperty(driverType, driverPath);
 		bd.startDriver(siteUrl);
 	}
 
 	@Test(priority = 0)
-	public void openWebsite() throws InterruptedException, FailedLoginException {
-		createR.doCreateTest("Open website");
-		func.openToURL(siteUrl);
+	public void open_Website() throws InterruptedException, FailedLoginException {
+		createR.do_Create_Test("open_Website".toUpperCase());
+		func.open_To_URL(siteUrl);
 	}
 	
 	@Test(priority = 1)
-	public void closeAnnouncement() {
-		createR.doCreateTest("Close Announcement");
+	public void close_Announcement() {
+		createR.do_Create_Test("close_Announcement".toUpperCase());
 	}
 	
-	@Test(dependsOnMethods = { "openWebsite" }, priority = 2)
-	public void clickRegisterOption() throws FailedLoginException, InterruptedException {
-		createR.doCreateTest("Click register option");
-		func.clickRegisterOption();
+	@Test(dependsOnMethods = { "open_Website" }, priority = 2)
+	public void click_Register_Option() throws FailedLoginException, InterruptedException {
+		createR.do_Create_Test("click_Register_Option".toUpperCase());
+		func.click_Register_Option();
+	}
+	
+	@Test(dependsOnMethods = { "click_Register_Option" }, priority = 2)
+	public void register_Fill_In_Details() throws FailedLoginException, InterruptedException {
+		createR.do_Create_Test("register_Fill_In_Details".toUpperCase());
+		func.register_Pop_Up_User_ID(userID);
+		func.register_Pop_Up_Pass_ID(passID);
+		func.register_Pop_Up_Pass_Eyeicon();
+		func.register_Pop_Up_Otp(otp);
+		func.register_Pop_Up_Referral_Optional(referralID);
+		func.register_Pop_Up_Date_Of_Birth();
+		func.register_Click_Register_Button();
+	}
+	
+	@Test(dependsOnMethods = { "register_Fill_In_Details" }, priority = 5)
+	public void verify_Register() throws FailedLoginException, InterruptedException {
+		createR.do_Create_Test("verify_Register".toUpperCase());
+		func.verify_Registered_User_ID(userID);
 	}
 
 	@AfterMethod
-	public void logCaseStatus(ITestResult result) {
-		resultL.logCase(result);
+	public void log_Case_Status(ITestResult result) {
+		resultL.log_Case(result);
 	}
 	
 	@AfterClass
-	public void endTest() throws InterruptedException {
-		func.screenCaptureIfPassedFinalStep();
+	public void end_Test() throws InterruptedException {
 		bd.stopDriver();
-		createR.doFlushTest();
+		createR.do_Flush_Test();
 	}
 }

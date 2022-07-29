@@ -1,81 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-07-29T10:54:46 SGT" name="Default suite" finished-at="2022-07-29T10:54:59 SGT" duration-ms="13205">
+  <suite started-at="2022-07-29T15:48:45 SGT" name="Default suite" finished-at="2022-07-29T15:49:06 SGT" duration-ms="21139">
     <groups>
     </groups>
-    <test started-at="2022-07-29T10:54:46 SGT" name="Default test" finished-at="2022-07-29T10:54:59 SGT" duration-ms="13205">
-      <class name="backend.LogoutBO">
-        <test-method is-config="true" signature="setProperty()[pri:0, instance:backend.LogoutBO@64d7b720]" started-at="2022-07-29T10:54:46 SGT" name="setProperty" finished-at="2022-07-29T10:54:49 SGT" duration-ms="3223" status="PASS">
+    <test started-at="2022-07-29T15:48:45 SGT" name="Default test" finished-at="2022-07-29T15:49:06 SGT" duration-ms="21139">
+      <class name="frontend.OfflineDeposit">
+        <test-method is-config="true" signature="set_Property()[pri:0, instance:frontend.OfflineDeposit@bd4dc25]" started-at="2022-07-29T15:48:45 SGT" name="set_Property" finished-at="2022-07-29T15:48:49 SGT" duration-ms="3602" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setProperty -->
-        <test-method signature="openWebsiteBO()[pri:0, instance:backend.LogoutBO@64d7b720]" started-at="2022-07-29T10:54:49 SGT" name="openWebsiteBO" finished-at="2022-07-29T10:54:50 SGT" duration-ms="797" status="PASS">
+        </test-method> <!-- set_Property -->
+        <test-method signature="open_Website()[pri:0, instance:frontend.OfflineDeposit@bd4dc25]" started-at="2022-07-29T15:48:49 SGT" name="open_Website" finished-at="2022-07-29T15:48:50 SGT" duration-ms="790" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- openWebsiteBO -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:backend.LogoutBO@64d7b720]" started-at="2022-07-29T10:54:50 SGT" name="logCaseStatus" finished-at="2022-07-29T10:54:50 SGT" duration-ms="2" status="PASS">
+        </test-method> <!-- open_Website -->
+        <test-method is-config="true" signature="log_Case_Status(org.testng.ITestResult)[pri:0, instance:frontend.OfflineDeposit@bd4dc25]" started-at="2022-07-29T15:48:50 SGT" name="log_Case_Status" finished-at="2022-07-29T15:48:50 SGT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=openWebsiteBO status=SUCCESS method=LogoutBO.openWebsiteBO()[pri:0, instance:backend.LogoutBO@64d7b720] output={null}]]]>
+                <![CDATA[[TestResult name=open_Website status=SUCCESS method=OfflineDeposit.open_Website()[pri:0, instance:frontend.OfflineDeposit@bd4dc25] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logCaseStatus -->
-        <test-method signature="loginFillInDetailsBO()[pri:1, instance:backend.LogoutBO@64d7b720]" started-at="2022-07-29T10:54:50 SGT" name="loginFillInDetailsBO" finished-at="2022-07-29T10:54:53 SGT" depends-on-methods="backend.LogoutBO.openWebsiteBO" duration-ms="2926" status="PASS">
+        </test-method> <!-- log_Case_Status -->
+        <test-method signature="close_Announcement()[pri:1, instance:frontend.OfflineDeposit@bd4dc25]" started-at="2022-07-29T15:48:50 SGT" name="close_Announcement" finished-at="2022-07-29T15:48:50 SGT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginFillInDetailsBO -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:backend.LogoutBO@64d7b720]" started-at="2022-07-29T10:54:53 SGT" name="logCaseStatus" finished-at="2022-07-29T10:54:53 SGT" duration-ms="1" status="PASS">
+        </test-method> <!-- close_Announcement -->
+        <test-method is-config="true" signature="log_Case_Status(org.testng.ITestResult)[pri:0, instance:frontend.OfflineDeposit@bd4dc25]" started-at="2022-07-29T15:48:50 SGT" name="log_Case_Status" finished-at="2022-07-29T15:48:50 SGT" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginFillInDetailsBO status=SUCCESS method=LogoutBO.loginFillInDetailsBO()[pri:1, instance:backend.LogoutBO@64d7b720] output={null}]]]>
+                <![CDATA[[TestResult name=close_Announcement status=SUCCESS method=OfflineDeposit.close_Announcement()[pri:1, instance:frontend.OfflineDeposit@bd4dc25] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logCaseStatus -->
-        <test-method signature="verifyLoginBO()[pri:2, instance:backend.LogoutBO@64d7b720]" started-at="2022-07-29T10:54:53 SGT" name="verifyLoginBO" finished-at="2022-07-29T10:54:54 SGT" depends-on-methods="backend.LogoutBO.loginFillInDetailsBO" duration-ms="1159" status="PASS">
+        </test-method> <!-- log_Case_Status -->
+        <test-method signature="click_Login_Option()[pri:2, instance:frontend.OfflineDeposit@bd4dc25]" started-at="2022-07-29T15:48:50 SGT" name="click_Login_Option" finished-at="2022-07-29T15:48:51 SGT" depends-on-methods="frontend.OfflineDeposit.open_Website" duration-ms="1107" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyLoginBO -->
-        <test-method signature="clickLogoutButtonBO()[pri:3, instance:backend.LogoutBO@64d7b720]" started-at="2022-07-29T10:54:54 SGT" name="clickLogoutButtonBO" finished-at="2022-07-29T10:54:55 SGT" depends-on-methods="backend.LogoutBO.verifyLoginBO" duration-ms="1087" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickLogoutButtonBO -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:backend.LogoutBO@64d7b720]" started-at="2022-07-29T10:54:54 SGT" name="logCaseStatus" finished-at="2022-07-29T10:54:54 SGT" duration-ms="0" status="PASS">
+        </test-method> <!-- click_Login_Option -->
+        <test-method is-config="true" signature="log_Case_Status(org.testng.ITestResult)[pri:0, instance:frontend.OfflineDeposit@bd4dc25]" started-at="2022-07-29T15:48:51 SGT" name="log_Case_Status" finished-at="2022-07-29T15:48:51 SGT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyLoginBO status=SUCCESS method=LogoutBO.verifyLoginBO()[pri:2, instance:backend.LogoutBO@64d7b720] output={null}]]]>
+                <![CDATA[[TestResult name=click_Login_Option status=SUCCESS method=OfflineDeposit.click_Login_Option()[pri:2, instance:frontend.OfflineDeposit@bd4dc25] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logCaseStatus -->
-        <test-method is-config="true" signature="logCaseStatus(org.testng.ITestResult)[pri:0, instance:backend.LogoutBO@64d7b720]" started-at="2022-07-29T10:54:55 SGT" name="logCaseStatus" finished-at="2022-07-29T10:54:55 SGT" duration-ms="0" status="PASS">
+        </test-method> <!-- log_Case_Status -->
+        <test-method signature="login_Pop_Up_Fill_In_Details()[pri:3, instance:frontend.OfflineDeposit@bd4dc25]" started-at="2022-07-29T15:48:51 SGT" name="login_Pop_Up_Fill_In_Details" finished-at="2022-07-29T15:48:53 SGT" depends-on-methods="frontend.OfflineDeposit.click_Login_Option" duration-ms="1960" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login_Pop_Up_Fill_In_Details -->
+        <test-method is-config="true" signature="log_Case_Status(org.testng.ITestResult)[pri:0, instance:frontend.OfflineDeposit@bd4dc25]" started-at="2022-07-29T15:48:53 SGT" name="log_Case_Status" finished-at="2022-07-29T15:48:53 SGT" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=clickLogoutButtonBO status=SUCCESS method=LogoutBO.clickLogoutButtonBO()[pri:3, instance:backend.LogoutBO@64d7b720] output={null}]]]>
+                <![CDATA[[TestResult name=login_Pop_Up_Fill_In_Details status=SUCCESS method=OfflineDeposit.login_Pop_Up_Fill_In_Details()[pri:3, instance:frontend.OfflineDeposit@bd4dc25] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logCaseStatus -->
-        <test-method is-config="true" signature="endTest()[pri:0, instance:backend.LogoutBO@64d7b720]" started-at="2022-07-29T10:54:55 SGT" name="endTest" finished-at="2022-07-29T10:54:59 SGT" duration-ms="3951" status="PASS">
+        </test-method> <!-- log_Case_Status -->
+        <test-method signature="click_Login_Button()[pri:4, instance:frontend.OfflineDeposit@bd4dc25]" started-at="2022-07-29T15:48:53 SGT" name="click_Login_Button" finished-at="2022-07-29T15:48:54 SGT" depends-on-methods="frontend.OfflineDeposit.login_Pop_Up_Fill_In_Details" duration-ms="1081" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- endTest -->
-      </class> <!-- backend.LogoutBO -->
+        </test-method> <!-- click_Login_Button -->
+        <test-method is-config="true" signature="log_Case_Status(org.testng.ITestResult)[pri:0, instance:frontend.OfflineDeposit@bd4dc25]" started-at="2022-07-29T15:48:54 SGT" name="log_Case_Status" finished-at="2022-07-29T15:48:54 SGT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=click_Login_Button status=SUCCESS method=OfflineDeposit.click_Login_Button()[pri:4, instance:frontend.OfflineDeposit@bd4dc25] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- log_Case_Status -->
+        <test-method signature="verify_Login()[pri:5, instance:frontend.OfflineDeposit@bd4dc25]" started-at="2022-07-29T15:48:54 SGT" name="verify_Login" finished-at="2022-07-29T15:48:57 SGT" depends-on-methods="frontend.OfflineDeposit.click_Login_Button" duration-ms="3514" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_Login -->
+        <test-method is-config="true" signature="log_Case_Status(org.testng.ITestResult)[pri:0, instance:frontend.OfflineDeposit@bd4dc25]" started-at="2022-07-29T15:48:57 SGT" name="log_Case_Status" finished-at="2022-07-29T15:48:57 SGT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify_Login status=SUCCESS method=OfflineDeposit.verify_Login()[pri:5, instance:frontend.OfflineDeposit@bd4dc25] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- log_Case_Status -->
+        <test-method signature="click_Deposit_Option()[pri:5, instance:frontend.OfflineDeposit@bd4dc25]" started-at="2022-07-29T15:48:57 SGT" name="click_Deposit_Option" finished-at="2022-07-29T15:49:04 SGT" depends-on-methods="frontend.OfflineDeposit.verify_Login" duration-ms="7032" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- click_Deposit_Option -->
+        <test-method is-config="true" signature="log_Case_Status(org.testng.ITestResult)[pri:0, instance:frontend.OfflineDeposit@bd4dc25]" started-at="2022-07-29T15:49:04 SGT" name="log_Case_Status" finished-at="2022-07-29T15:49:04 SGT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=click_Deposit_Option status=SUCCESS method=OfflineDeposit.click_Deposit_Option()[pri:5, instance:frontend.OfflineDeposit@bd4dc25] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- log_Case_Status -->
+        <test-method is-config="true" signature="end_Test()[pri:0, instance:frontend.OfflineDeposit@bd4dc25]" started-at="2022-07-29T15:49:04 SGT" name="end_Test" finished-at="2022-07-29T15:49:06 SGT" duration-ms="2002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- end_Test -->
+      </class> <!-- frontend.OfflineDeposit -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
